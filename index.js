@@ -48,3 +48,16 @@ function maxOf(myArray) {
     return Math.max(myArray.pop(), maxOf(myArray));
   }
 }
+
+function includesNumber(numArr, target) {
+  let l = numArr.length;
+
+    if (numArr[0] === target) {
+      return true;
+    } else if (numArr.length > 1) {
+      numArr.shift()
+      return includesNumber(numArr, target);
+    } else {
+      return false;
+    }
+}
