@@ -35,7 +35,7 @@ function addUpTo(numArr, target) {
 
 
   if (target) {
-    console.log(numArr)
+    console.log(numArr[target])
     return numArr[target] + addUpTo(numArr, --target);
   } else {
     return numArr[target];
