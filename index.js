@@ -32,11 +32,12 @@ function isPalindrome(myString) {
 }
 
 function addUpTo(numArr, target) {
-  let sum = 0
 
-  if (numArr.length < 2) {
-    return sum;
+
+  if (target) {
+    console.log(numArr)
+    return numArr[target] + addUpTo(numArr, --target);
   } else {
-    return
+    return numArr[target];
   }
 }
