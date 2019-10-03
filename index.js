@@ -40,3 +40,11 @@ function addUpTo(numArr, target) {
     return numArr[target];
   }
 }
+
+function maxOf(myArray) {
+  if (myArray.length === 1) {
+    return myArray[0];
+  } else {
+    return Math.max(myArray.pop(), maxOf(myArray));
+  }
+}
